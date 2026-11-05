@@ -1,7 +1,5 @@
 import { useState } from 'react'
-
-// Categorias disponíveis no select (fixas, definidas pela aula).
-const categorias = ['Alimentação', 'Transporte', 'Lazer', 'Outros']
+import { categorias } from '../categorias.js'
 
 // Formulário de cadastro: valida os campos e devolve o gasto pronto
 // para o App adicionar na lista (Missão 1).

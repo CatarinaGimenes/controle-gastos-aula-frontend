@@ -46,9 +46,23 @@ Resposta: Ele adicionou um ID nos valores salvos, e remove com base nesse ID
 
 ## Missão 4 · Filtrar
 M4.1 Qual foi o seu prompt da tentativa B?
-Resposta:
+Resposta: 
+Planeje um filtro por categoria na seção **"Gastos do mês"**, posicionado no canto superior direito, ao lado do contador de gastos.
+
+O filtro deve permitir selecionar uma categoria específica ou visualizar todas as categorias (opção padrão). As opções devem corresponder às categorias já existentes no cadastro de gastos.
+
+Ao selecionar uma categoria:
+
+- Exiba na lista apenas os gastos pertencentes à categoria selecionada.
+- Atualize o contador para mostrar a quantidade de gastos filtrados.
+- Atualize o card **"TOTAL"** para exibir a soma apenas dos gastos visíveis após a aplicação do filtro.
+
+Ao selecionar "Todas", restaure a exibição de todos os gastos e o valor total original.
+
+Mantenha o padrão visual atual da aplicação, respeitando as cores, fontes, espaçamentos e componentes já utilizados. O filtro deve ser integrado ao layout sem prejudicar a organização da tela.
+
 M4.2 Qual tentativa gerou o melhor plano, A ou B? Por quê?
-Resposta:
+Resposta: O prompt B, pois ele estava mais direcionado. Enquanto no prompt A, o agente precisava se decidir entre se o card Total deveria acompanhar o filtro da lista ou não, o segundo se decidia entre a melhor forma de exibir quantos gastos estavam aparecendo na tela (ex: Se apareceria "5 gastos" ou "5 de 10 gastos") - No segundo prompt, a IA conseguiu focar em mais detalhes.
 
 ## Bônus · Salvar
 B.1 Onde o localStorage guarda os dados?

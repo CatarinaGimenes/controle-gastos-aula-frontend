@@ -79,7 +79,8 @@
 }
 
 .campo input,
-.campo select {
+.campo select,
+.lista-filtro {
   font: inherit;
   color: var(--text-h);
   background: var(--bg);
@@ -97,7 +98,8 @@
 }
 
 .campo input:focus-visible,
-.campo select:focus-visible {
+.campo select:focus-visible,
+.lista-filtro:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 1px;
   border-color: var(--accent);
@@ -143,11 +145,40 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 8px;
 }
 
 .lista-cabecalho h2 {
   margin-bottom: 0;
+}
+
+/* Contador + filtro: canto superior direito do card */
+.lista-cabecalho-acoes {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+/* Mesmo visual dos campos do formulário, só que compacto */
+.lista-cabecalho-acoes .lista-filtro {
+  width: auto;
+  max-width: 200px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .lista-cabecalho-acoes {
+    width: 100%;
+  }
+
+  .lista-cabecalho-acoes .lista-filtro {
+    flex: 1;
+    max-width: none;
+  }
 }
 
 .lista-dica {

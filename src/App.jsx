@@ -9,6 +9,9 @@ function App() {
   // Lista de gastos: começa vazia e cresce a cada "Adicionar gasto".
   const [gastos, setGastos] = useState([])
 
+  // Filtro por categoria: '' significa "Todas as categorias".
+  const [filtro, setFiltro] = useState('')
+
   // Contador de ids: o App é quem identifica cada gasto, garantindo
   // que dois gastos nunca fiquem com o mesmo id.
   const proximoId = useRef(1)
@@ -18,6 +21,8 @@ function App() {
     const id = proximoId.current
     proximoId.current += 1
     setGastos((lista) => [...lista, { id, ...dadosGasto }])
+    // Limpa o filtro para o gasto novo sempre aparecer na lista.
+    setFiltro('')
   }
 
   // Remove o gasto que tem o id passado; os demais ficam na lista.
@@ -25,8 +30,12 @@ function App() {
     setGastos((lista) => lista.filter((gasto) => gasto.id !== id))
   }
 
-  // Total derivado do estado: muda sozinho a cada gasto adicionado.
-  const total = somarGastos(gastos)
+  // Lista derivada do estado: só os gastos da categoria selecionada.
+  const gastosVisiveis =
+    filtro === '' ? gastos : gastos.filter((gasto) => gasto.categoria === filtro)
+
+  // Total derivado do estado: soma o que está visível na lista.
+  const total = somarGastos(gastosVisiveis)
 
   return (
     <div className="pagina">
@@ -41,7 +50,13 @@ function App() {
           <TotalGastos valorTotal={total} />
         </div>
 
-        <ListaGastos gastos={gastos} onRemover={removerGasto} />
+        <ListaGastos
+          gastos={gastos}
+          gastosVisiveis={gastosVisiveis}
+          filtro={filtro}
+          onTrocarFiltro={setFiltro}
+          onRemover={removerGasto}
+        />
       </main>
     </div>
   )
