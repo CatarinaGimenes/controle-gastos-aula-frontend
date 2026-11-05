@@ -44,8 +44,8 @@ function FormularioGasto({ onAdicionar }) {
     // Algo inválido: só mostra o erro, nada é adicionado.
     if (Object.keys(novosErros).length > 0) return
 
+    // O id é gerado pelo App; aqui só enviamos os dados do gasto.
     onAdicionar({
-      id: Date.now(),
       descricao: descricao.trim(),
       categoria: categoria === '' ? 'Outros' : categoria,
       valor,

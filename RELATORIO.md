@@ -40,9 +40,9 @@ Resposta: Por que existe um erro de ponto flutuante que acontece pelos cálculos
 
 ## Missão 3 · Remover
 M3.1 O agente mudou algo que você não pediu? O quê?
-Resposta:
+Resposta: Não, ele fez tudo certinho
 M3.2 Como o código sabe qual gasto remover?
-Resposta:
+Resposta: Ele adicionou um ID nos valores salvos, e remove com base nesse ID
 
 ## Missão 4 · Filtrar
 M4.1 Qual foi o seu prompt da tentativa B?

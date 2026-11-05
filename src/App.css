@@ -213,6 +213,39 @@
   white-space: nowrap;
 }
 
+/* ---------- Remover gasto ---------- */
+
+.item-acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-remover {
+  font: inherit;
+  font-size: 13px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 4px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    color 0.2s,
+    border-color 0.2s;
+}
+
+.item-remover:hover {
+  color: var(--erro);
+  border-color: var(--erro);
+}
+
+.item-remover:focus-visible {
+  outline: 2px solid var(--erro);
+  outline-offset: 2px;
+}
+
 /* ---------- Total ---------- */
 
 .cartao-total {

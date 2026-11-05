@@ -2,7 +2,7 @@ import { formatarReal } from '../formatadores.js'
 
 // Lista de gastos: recebe os dados por propriedade (props),
 // que agora vêm do estado do App e crescem a cada gasto adicionado.
-function ListaGastos({ gastos }) {
+function ListaGastos({ gastos, onRemover }) {
   return (
     <section className="cartao">
       <div className="lista-cabecalho">
@@ -22,7 +22,16 @@ function ListaGastos({ gastos }) {
                 <span className="item-descricao">{gasto.descricao}</span>
                 <span className="item-categoria">{gasto.categoria}</span>
               </div>
-              <span className="item-valor">R$ {formatarReal(gasto.valor)}</span>
+              <div className="item-acoes">
+                <span className="item-valor">R$ {formatarReal(gasto.valor)}</span>
+                <button
+                  type="button"
+                  className="item-remover"
+                  onClick={() => onRemover(gasto.id)}
+                >
+                  Remover
+                </button>
+              </div>
             </li>
           ))}
         </ul>
