@@ -5,15 +5,24 @@ Modelo usado: MiMo-V2.6-Flash Free
 
 ## Passo 1 · AGENTS.md
 1.1 O que o /init descobriu sozinho sobre o projeto?
-Resposta:
+Resposta: Ele descobriu sozinho que era um projeto de controle de gastos apenas analisando o RELATORIO.md
 1.2 Qual regra você adicionou ao AGENTS.md e por quê?
-Resposta:
+Resposta: Adicionei a regra de não alterar esse arquivo, pois faz parte da atividade e deve ser respondido manualmente
 
 ## Passo 2 · Estrutura
 2.1 Quais arquivos o plano criou ou alterou?
 Resposta:
+ARQUIVOS CRIADOS:
+FormularioGasto.jsx
+ListaGastos.jsx
+TotalGastos.jsx
+ARQUIVOS ALTERADOS:
+App.jsx
+index.css
+index.html (apenas para mudar a lang e o título)
 2.2 Qual regra do AGENTS.md você viu sendo aplicada?
 Resposta:
+Ele comentou o código em português, não fez alterações neste arquivo (RELATORIO.md), não importou novas bibliotecas e fez as verificações com os comandos mapeados no Agents
 
 ## Missão 1 · Adicionar
 M1.1 Como o app trata "12,50" com vírgula? Quem decidiu isso: você ou o agente?

@@ -1,17 +1,18 @@
+import { useState } from 'react'
 import FormularioGasto from './components/FormularioGasto.jsx'
 import ListaGastos from './components/ListaGastos.jsx'
 import TotalGastos from './components/TotalGastos.jsx'
 import './App.css'
 
-// Exemplos fixos: ainda não existe estado nem persistência.
-// As próximas missões trocam esta constante por gastos reais.
-const gastosExemplo = [
-  { id: 1, descricao: 'Almoço', categoria: 'Alimentação', valor: '32,00' },
-  { id: 2, descricao: 'Uber', categoria: 'Transporte', valor: '18,50' },
-  { id: 3, descricao: 'Cinema', categoria: 'Lazer', valor: '54,90' },
-]
-
 function App() {
+  // Lista de gastos: começa vazia e cresce a cada "Adicionar gasto".
+  const [gastos, setGastos] = useState([])
+
+  // Adiciona o gasto validado pelo formulário no fim da lista.
+  function adicionarGasto(novoGasto) {
+    setGastos((lista) => [...lista, novoGasto])
+  }
+
   return (
     <div className="pagina">
       <header className="cabecalho">
@@ -21,11 +22,12 @@ function App() {
 
       <main className="grade">
         <div className="coluna-formulario">
-          <FormularioGasto />
+          <FormularioGasto onAdicionar={adicionarGasto} />
+          {/* A soma real dos gastos chega na Missão 2. */}
           <TotalGastos valorTotal="105,40" />
         </div>
 
-        <ListaGastos gastos={gastosExemplo} />
+        <ListaGastos gastos={gastos} />
       </main>
     </div>
   )
