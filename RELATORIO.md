@@ -1,6 +1,6 @@
 # Relatório · Controle de Gastos
 
-Nome:
+Nome: Catarina Gimenes Pires
 Modelo usado: MiMo-V2.6-Flash Free
 
 ## Passo 1 · AGENTS.md
@@ -66,16 +66,16 @@ Resposta: O prompt B, pois ele estava mais direcionado. Enquanto no prompt A, o 
 
 ## Bônus · Salvar
 B.1 Onde o localStorage guarda os dados?
-Resposta:
+Resposta: Ele guarda no perfil do navegador, visível nas DevTools/armazenamento
 B.2 Por que os gastos não aparecem em outro navegador?
-Resposta:
+Resposta: Por que não estão sendo salvos no servidor, só localmente
 
 ## Reflexão final
 R.1 Sem olhar o código, explique como um dos seus componentes recebe e altera os gastos.
-Resposta:
+Resposta: Ele recebe os props dos gastos que são alterados com useState
 R.2 Em que momento você aceitou algo sem entender?
-Resposta:
+Resposta: Principalmente no primeiro prompt, pois decidi que já que era o primeiro, caso desse errado era só recomeçar
 R.3 Quais decisões foram suas e quais foram do agente?
-Resposta:
+Resposta: Minhas decisões foram quando a IA me perguntava de qual forma eu queria que ela agisse, exemplo: Perguntando se deveria criar um novo arquivo para calculos ou manter no mesmo arquivo do formatador
 R.4 O que continuaria valendo se você trocasse o modelo?
-Resposta:
+Resposta: O Código permaneceria o mesmo, a única diferença é que outro agente talvez sugerisse mudanças diferentes ou se comunicaria comigo de outras maneiras
