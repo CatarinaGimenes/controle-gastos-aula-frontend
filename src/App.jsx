@@ -2,6 +2,7 @@ import { useState } from 'react'
 import FormularioGasto from './components/FormularioGasto.jsx'
 import ListaGastos from './components/ListaGastos.jsx'
 import TotalGastos from './components/TotalGastos.jsx'
+import { somarGastos } from './calculos.js'
 import './App.css'
 
 function App() {
@@ -13,6 +14,9 @@ function App() {
     setGastos((lista) => [...lista, novoGasto])
   }
 
+  // Total derivado do estado: muda sozinho a cada gasto adicionado.
+  const total = somarGastos(gastos)
+
   return (
     <div className="pagina">
       <header className="cabecalho">
@@ -23,8 +27,7 @@ function App() {
       <main className="grade">
         <div className="coluna-formulario">
           <FormularioGasto onAdicionar={adicionarGasto} />
-          {/* A soma real dos gastos chega na Missão 2. */}
-          <TotalGastos valorTotal="105,40" />
+          <TotalGastos valorTotal={total} />
         </div>
 
         <ListaGastos gastos={gastos} />

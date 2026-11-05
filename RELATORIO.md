@@ -26,15 +26,17 @@ Ele comentou o código em português, não fez alterações neste arquivo (RELAT
 
 ## Missão 1 · Adicionar
 M1.1 Como o app trata "12,50" com vírgula? Quem decidiu isso: você ou o agente?
-Resposta:
+Resposta: 
+O valor é salvo no estado como número "12.5", mas o usuário pode inseri-lo em formato de String, como "12,50". O código é responsável por converter a string em número e reconhecer o . como , - Quem tomou essa decisão fui eu, quando o agente me perguntou como eu gostaria de prosseguir no tratamento de vírgulas
 M1.2 Quantas tool calls a missão usou?
-Resposta:
+Resposta: 
+Durante o planejamento, foram feitas 13 tool calls, enquanto durante a execução, foram feitas 20. No final, somaram 33 tool calls
 
 ## Missão 2 · Total
 M2.1 Quanto deu 0,10 + 0,20 no app?
-Resposta:
+Resposta: Deu R$ 0,30
 M2.2 Por que 0.1 + 0.2 não dá exatamente 0.3 no JavaScript?
-Resposta:
+Resposta: Por que existe um erro de ponto flutuante que acontece pelos cálculos terem que ser feitos sendo convertidos para números binários
 
 ## Missão 3 · Remover
 M3.1 O agente mudou algo que você não pediu? O quê?
