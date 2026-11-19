@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "@context": "https://agenticresourcediscovery.org/context/v1",
+      "identifier": "urn:air:example.com:app:controle-gastos",
+      "displayName": "Controle de Gastos",
+      "type": "application/agent-skills+md",
+      "url": "http://localhost:5173/llms.txt",
+      "description": "Aplicação para registro e acompanhamento de gastos pessoais.",
+      "representativeQueries": [
+        "registrar gasto de alimentação",
+        "ver total de gastos do mês"
+      ]
+    }
+  ]
+}
